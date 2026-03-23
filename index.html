@@ -1,124 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Southwest Interiors LLC</title>
+<a class="button" href="mailto:southwestinteriors@outlook.com">✉️ Email</a>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-      color: #1f2f46;
-      text-align: center;
-    }
+<button class="button" onclick="toggleServices()">🛠 Services</button>
 
-    .container {
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
+<div id="servicesBox" class="services-box">
+  <strong>Our Services</strong><br><br>
+  Handyman / General Repairs<br>
+  Interior Repairs<br>
+  Furnace Maintenance<br>
+  Garage Door Service<br>
+  Housekeeping / Turnover<br>
+  Emergency / On-Call Service
+</div>
 
-    h1 {
-      margin-bottom: 10px;
-      font-size: 36px;
-    }
+<a class="button" href="#">
+  📋 Request Service / Solicitar Servicio
+</a>
 
-    .subtitle {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
+<div class="note">
+  All requests are documented for scheduling, safety, and service verification.
+  Priority and emergency/on-call requests may include additional fees and are subject to availability.
+</div>
 
-    .button {
-      display: block;
-      width: 100%;
-      max-width: 320px;
-      margin: 12px auto;
-      padding: 16px;
-      background: #3f5878;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 17px;
-      border: none;
-      cursor: pointer;
-      box-sizing: border-box;
-    }
-
-    .button:hover {
-      opacity: 0.95;
-    }
-
-    .services-box {
-      display: none;
-      margin: 20px auto 0;
-      max-width: 320px;
-      background: white;
-      border-radius: 10px;
-      padding: 18px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      color: #333;
-      line-height: 1.7;
-    }
-
-    .note {
-      max-width: 360px;
-      margin: 18px auto 0;
-      font-size: 14px;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    .location {
-      margin-top: 25px;
-      color: #666;
-      font-size: 17px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-
-    <h1>Southwest Interiors LLC</h1>
-    <div class="subtitle">Yanira Yañez – CEO</div>
-
-    <a class="button" href="tel:5022077186">📞 Call Now</a>
-    <a class="button" href="sms:5022077186">💬 Text Now</a>
-    <a class="button" href="mailto:southwestinteriors@outlook.com">✉️ Email</a>
-
-    <button class="button" onclick="toggleServices()">🛠 Services</button>
-
-    <div id="servicesBox" class="services-box">
-      <strong>Our Services</strong><br><br>
-      Handyman / General Repairs<br>
-      Interior Repairs<br>
-      Furnace Maintenance<br>
-      Garage Door Service<br>
-      Housekeeping / Turnover<br>
-      Emergency / On-Call Service
-    </div>
-
-    <!-- ONE CLEAN BOOKING BUTTON -->
-   <a class="button" href="https://form.jotform.com/123456789">
-     
-    <div class="note">
-      All requests are documented for scheduling, safety, and service verification.
-      Priority and emergency/on-call requests may include additional fees and are subject to availability.
-    </div>
-
-    <div class="location">📍 Louisville, KY</div>
-
-  </div>
-
-  <script>
-    function toggleServices() {
-      const box = document.getElementById("servicesBox");
-      box.style.display = box.style.display === "block" ? "none" : "block";
-    }
-  </script>
-
-</body>
-</html>
+<div class="location">📍 Louisville, KY</div>
