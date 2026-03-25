@@ -1,24 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Southwest Interiors LLC</title>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: #111;
+  color: #f2f4ff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 32px 20px 40px;
+}
+
+h1 {
+  font-size: 42px;
+  margin: 20px 0;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin: 12px auto;
+  padding: 16px;
+  background: #001a5c;
+  color: white;
+  text-decoration: none;
+  border-radius: 14px;
+  font-size: 18px;
+}
+
+.services-box {
+  display: none;
+  max-width: 320px;
+  margin: 10px auto;
+  padding: 18px;
+  background: #31476f;
+  border-radius: 14px;
+}
+
+.note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.location {
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
 <h1>Southwest Interiors LLC</h1>
 
-<!-- SERVICES UNDER TITLE -->
 <button class="button" onclick="toggleServices()">🛠 Services</button>
 
 <div id="servicesBox" class="services-box">
-  <strong>Services / Servicios</strong><br><br>
-  Handyman / Reparaciones Generales<br>
-  Interior Repairs / Reparaciones Interiores<br>
-  Furnace Maintenance / Mantenimiento de Calefacción<br>
-  Garage Door Service / Puertas de Garaje<br>
-  Housekeeping / Turnover / Limpieza<br>
-  Emergency / On-Call / Emergencia
+  Handyman<br>
+  Interior Repairs<br>
+  Furnace Maintenance<br>
+  Garage Door Service<br>
+  Housekeeping<br>
+  Emergency / On-Call
 </div>
 
-<!-- BOOK NOW RIGHT AFTER SERVICES -->
-<a class="button" href="https://form.jotform.com/YOURREALNUMBER" style="background:#2e7d32;">
-  📋 Book Now / Reservar Ahora
+<a class="button" href="https://form.jotform.com/260827925620056" style="background:#2e7d32;">
+  📋 Book Now / Request Service
 </a>
 
-<!-- CONTACT BUTTONS -->
 <a class="button" href="tel:5022077186">📞 Call Now</a>
 <a class="button" href="sms:5022077186">💬 Text Now</a>
 <a class="button" href="mailto:southwestinteriors@outlook.com">✉️ Email</a>
+
+<div class="note">
+All requests are documented for scheduling and safety.
+</div>
+
+<div class="location">📍 Louisville, KY</div>
+
+</div>
+
+<script>
+function toggleServices() {
+  var box = document.getElementById("servicesBox");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
