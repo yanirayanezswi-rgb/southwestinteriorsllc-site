@@ -1,99 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Southwest Interiors LLC</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Southwest Interiors LLC</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: white;
-  text-align: center;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #1f2f46;
+      line-height: 1.5;
+    }
 
-.container {
-  max-width: 420px;
-  margin: auto;
-  padding: 30px 20px;
-}
+    .hero {
+      background: linear-gradient(rgba(20, 32, 56, 0.88), rgba(20, 32, 56, 0.88)),
+        url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 70px 20px 55px;
+    }
 
-h1 {
-  margin-bottom: 20px;
-}
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: 40px;
+      letter-spacing: 0.5px;
+    }
 
-.button {
-  display: block;
-  width: 90%;
-  margin: 10px auto;
-  padding: 15px;
-  background: #001a5c;
-  color: white;
-  text-decoration: none;
-  border-radius: 12px;
-  font-size: 18px;
-}
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 14px;
+      font-size: 18px;
+    }
 
-.button.green {
-  background: #2e7d32;
-}
+    .hero-buttons {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
 
-.services-box {
-  display: none;
-  background: #31476f;
-  margin: 10px auto;
-  padding: 15px;
-  border-radius: 12px;
-  width: 90%;
-}
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
 
-.note {
-  margin-top: 15px;
-  font-size: 14px;
-  color: #ccc;
-}
-</style>
+    .btn-primary {
+      background: #2e7d32;
+      color: white;
+    }
 
+    .btn-secondary {
+      background: white;
+      color: #1f2f46;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn:hover {
+      opacity: 0.92;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 55px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin: 0 0 12px;
+      color: #1f2f46;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 35px;
+      color: #5a6678;
+      font-size: 17px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #1f2f46;
+      font-size: 21px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #5b6472;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      align-items: start;
+    }
+
+    .info-box {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+    }
+
+    .info-box h3 {
+      margin-top: 0;
+      color: #1f2f46;
+    }
+
+    .info-box ul {
+      margin: 0;
+      padding-left: 20px;
+      color: #5b6472;
+    }
+
+    .cta {
+      background: #1f2f46;
+      color: white;
+      text-align: center;
+      border-radius: 20px;
+      padding: 40px 20px;
+    }
+
+    .cta h2 {
+      margin-top: 0;
+      font-size: 30px;
+    }
+
+    .cta p {
+      max-width: 720px;
+      margin: 0 auto 24px;
+      color: #d6dbe4;
+      font-size: 17px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .contact-item {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+    }
+
+    .contact-item h3 {
+      margin-top: 0;
+      color: #1f2f46;
+    }
+
+    .contact-item a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: bold;
+      word-break: break-word;
+    }
+
+    .footer {
+      background: #142038;
+      color: #d9dfeb;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
+  <section class="hero">
+    <h1>Southwest Interiors LLC</h1>
+    <p>Reliable maintenance, minor home repairs, and on-call service for homeowners, realtors, investors, and property managers.</p>
+    <p>Serving Louisville, Kentucky and surrounding areas.</p>
 
-<h1>Southwest Interiors LLC</h1>
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="https://form.jotform.com/260827925620056" target="_blank">Request Service</a>
+      <a class="btn btn-secondary" href="tel:5022077186">Call Now</a>
+      <a class="btn btn-outline" href="sms:5022077186">Text Now</a>
+    </div>
+  </section>
 
-<button class="button" onclick="toggleServices()">🛠 Services</button>
+  <section class="section">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">Professional help for everyday repairs, property turnover needs, maintenance requests, and urgent on-call situations.</p>
 
-<div id="servicesBox" class="services-box">
-  Handyman<br>
-  Interior Repairs<br>
-  Furnace Maintenance<br>
-  Garage Door Service<br>
-  Housekeeping<br>
-  Emergency / On-Call
-</div>
+    <div class="cards">
+      <div class="card">
+        <h3>Minor Home Repairs</h3>
+        <p>General handyman work, interior fixes, small repairs, adjustments, and maintenance needs.</p>
+      </div>
+      <div class="card">
+        <h3>Maintenance Services</h3>
+        <p>Preventive maintenance, troubleshooting, repair follow-up, and support for ongoing property care.</p>
+      </div>
+      <div class="card">
+        <h3>Turnovers & Make-Ready</h3>
+        <p>Support for rental turnovers, light cleanup coordination, and preparation for listing or occupancy.</p>
+      </div>
+      <div class="card">
+        <h3>On-Call Requests</h3>
+        <p>Priority and emergency-style response based on urgency, availability, and job type.</p>
+      </div>
+    </div>
+  </section>
 
-<a class="button green" href="https://form.jotform.com/260827925620056">
-📋 Book Now / Request Service
-</a>
+  <section class="section">
+    <h2 class="section-title">Who We Serve</h2>
+    <p class="section-subtitle">Our service system is built to support different types of clients and property needs.</p>
 
-<a class="button" href="tel:5022077186">📞 Call Now</a>
-<a class="button" href="sms:5022077186">💬 Text Now</a>
-<a class="button" href="mailto:southwestinteriors@outlook.com">✉️ Email</a>
+    <div class="cards">
+      <div class="card">
+        <h3>Homeowners</h3>
+        <p>Help with repairs, maintenance questions, service visits, and ongoing property support.</p>
+      </div>
+      <div class="card">
+        <h3>Realtors</h3>
+        <p>Fast coordination for listings, repair needs, maintenance issues, and property readiness.</p>
+      </div>
+      <div class="card">
+        <h3>Investors</h3>
+        <p>Reliable support for property upkeep, repair requests, and service coordination across units.</p>
+      </div>
+      <div class="card">
+        <h3>Property Managers</h3>
+        <p>Structured request handling, job intake, urgency tracking, and service follow-up.</p>
+      </div>
+    </div>
+  </section>
 
-<div class="note">
-All requests are documented for scheduling and safety.
-</div>
+  <section class="section">
+    <div class="split">
+      <div class="info-box">
+        <h3>Request Service</h3>
+        <p>Use our online request form to submit job details, upload photos, choose service preference, and note urgency.</p>
+        <br>
+        <a class="btn btn-primary" href="https://form.jotform.com/260827925620056" target="_blank">Book Now / Request Service</a>
+      </div>
 
-</div>
+      <div class="info-box">
+        <h3>Service Notes</h3>
+        <ul>
+          <li>Requests are reviewed based on availability.</li>
+          <li>Priority and on-call requests may include additional fees.</li>
+          <li>Some jobs may be reviewed first by text, call, or photo before scheduling in person.</li>
+          <li>All requests are documented for scheduling, safety, and service verification.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<script>
-function toggleServices() {
-  var box = document.getElementById("servicesBox");
-  box.style.display = box.style.display === "block" ? "none" : "block";
-}
-</script>
+  <section class="section">
+    <div class="cta">
+      <h2>Need help with a repair or maintenance request?</h2>
+      <p>Submit your request online or contact Southwest Interiors LLC directly for service support, priority jobs, and property-related maintenance needs.</p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="https://form.jotform.com/260827925620056" target="_blank">Request Service</a>
+        <a class="btn btn-secondary" href="mailto:southwestinteriors@outlook.com">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-subtitle">Reach out directly or use the request form for the fastest intake and tracking.</p>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <h3>Phone</h3>
+        <a href="tel:5022077186">(502) 207-7186</a>
+      </div>
+      <div class="contact-item">
+        <h3>Text</h3>
+        <a href="sms:5022077186">Send a Text Message</a>
+      </div>
+      <div class="contact-item">
+        <h3>Email</h3>
+        <a href="mailto:southwestinteriors@outlook.com">southwestinteriors@outlook.com</a>
+      </div>
+      <div class="contact-item">
+        <h3>Service Area</h3>
+        <p>Louisville, KY and surrounding areas</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2026 Southwest Interiors LLC. All rights reserved.
+  </footer>
 
 </body>
 </html>
