@@ -230,7 +230,32 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section"<section class="section" style="background:#f4f4f4;">
+  <h2 class="section-title">Request Service</h2>
+  <p class="section-subtitle">Send us your request and we’ll contact you ASAP</p>
+
+  <form action="https://formspree.io/f/mayvlkzb" method="POST" style="max-width:500px;margin:auto;">
+    
+    <input type="text" name="name" placeholder="Full Name" required style="width:100%;padding:10px;margin:10px 0;">
+    
+    <input type="tel" name="phone" placeholder="Phone Number" required style="width:100%;padding:10px;margin:10px 0;">
+    
+    <input type="text" name="address" placeholder="Service Address" style="width:100%;padding:10px;margin:10px 0;">
+
+    <select name="service" style="width:100%;padding:10px;margin:10px 0;">
+      <option>Minor Repair</option>
+      <option>Cleaning</option>
+      <option>Maintenance</option>
+      <option>Emergency</option>
+    </select>
+
+    <textarea name="message" placeholder="What do you need help with?" required style="width:100%;padding:10px;margin:10px 0;"></textarea>
+
+    <button type="submit" class="btn btn-primary" style="width:100%;padding:12px;">
+      Submit Request
+    </button>
+  </form>
+</section>
     <h2 class="section-title">Our Services</h2>
     <p class="section-subtitle">Professional help for everyday repairs, property turnover needs, maintenance requests, and urgent on-call situations.</p>
 
